@@ -153,13 +153,13 @@ const NavBar = () => {
                   {page}
                 </Button>
               ))} */}
-                <Button style={{color:"black"}} textAlign="center">Lectures</Button>
-                <Button style={{color:"black"}} textAlign="center">Assignments</Button>
-                <Button style={{color:"black"}} textAlign="center">Quizzes</Button>
-                <Button style={{color:"black"}} textAlign="center">Tickets</Button>
-                <Button style={{color:"black"}} textAlign="center">Discussions</Button>
-                <Button style={{color:"black"}} textAlign="center">Notifications</Button>
-                <Button style={{color:"black"}} textAlign="center">Electives</Button>
+                <Button style={{color:"#6b7280"}} textAlign="center">Lectures</Button>
+                <Button style={{color:"#6b7280"}} textAlign="center">Assignments</Button>
+                <Button style={{color:"#6b7280"}} textAlign="center">Quizzes</Button>
+                <Button style={{color:"#6b7280"}} textAlign="center">Tickets</Button>
+                <Button style={{color:"#6b7280"}} textAlign="center">Discussions</Button>
+                <Button style={{color:"#6b7280"}} textAlign="center">Notifications</Button>
+                <Button style={{color:"#6b7280"}} textAlign="center">Electives</Button>
             </Box>
 
             <Box sx={{ flexGrow: 0 }}
@@ -194,7 +194,7 @@ const NavBar = () => {
 
 
                 <MenuItem>
-                    <Typography textAlign="center">Manage Account</Typography>
+                    <Typography  textAlign="center" style={{ color:"#a9abbb"}} >Manage Account</Typography>
                 </MenuItem>
                 <hr/>
 
