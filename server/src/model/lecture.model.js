@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const lectureSchema = new mongoose.Schema({
     lecturename: {type: String, required: true},
     teachername: {type: String, required: true},
-    lecturtype: {type: String, required: true},
-    lecturtag: {type: String, required: true},
+    lecturetype: {type: String, required: true},
+    lecturetag: {type: String, required: true},
     date: {type: String, required: true},
     time: {type: String, required: true},
     
