@@ -13,26 +13,44 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from 'react-router-dom';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 
+
+import {
+    onAuthStateChanged,
+    signOut,
+  } from "firebase/auth";
+import { auth } from '../config/firebase-config';
 
 
 // const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const NavBar = () => {
 
   
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  
 
+//   const [user, setUser] = React.useState({});
 
   
+//     onAuthStateChanged(auth, (currentUser) => {
+//       setUser(currentUser);
+//     });
+  
+
+const logout = async () => {
+    await signOut(auth);
+  };
   const navigate = useNavigate()
 
   const handlLogin = () =>{
     navigate("/login")
   }
+
 
 
 
@@ -51,9 +69,9 @@ const NavBar = () => {
     setAnchorElNav(null);
   };
 
-//   const handleCloseUserMenu = () => {
-//     setAnchorElUser(null);
-//   };
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
 
     return (
       <AppBar position="static" 
@@ -167,7 +185,11 @@ const NavBar = () => {
             >
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                {/* <Typography textAlign="center">{user.email}</Typography> */}
+
+                <Typography textAlign="center">Rohit Kumar(Fw11_167)</Typography>
+                <KeyboardArrowDownIcon />
+                  {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> */}
                 </IconButton>
               </Tooltip>
               <Menu
@@ -184,7 +206,7 @@ const NavBar = () => {
                   horizontal: 'right',
                 }}
                 open={Boolean(anchorElUser)}
-                // onClose={handleCloseUserMenu}
+                onClose={handleCloseUserMenu}
               >
                 {/* {settings.map((setting) => (
                   <MenuItem key={setting} onClick={handleCloseUserMenu}>
@@ -204,7 +226,12 @@ const NavBar = () => {
                 <hr/>
 
                 <MenuItem onClick={()=>handlLogin()}>
-                    <Typography textAlign="center">Log Out</Typography>
+                    <Typography textAlign="center">Log In</Typography>
+                </MenuItem>
+                <hr/>
+
+                <MenuItem>
+                    <Typography onClick={logout} textAlign="center">Log Out</Typography>
                 </MenuItem>
 
 

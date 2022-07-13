@@ -1,17 +1,15 @@
 import React, { useState } from 'react'
 import NavBar from './NavBar'
-import "./Login.css"
+import "./Signup.css"
 import { Box, Button, Checkbox, FormControl, FormControlLabel, FormGroup, Input, InputLabel, TextField } from '@mui/material'
-import { useNavigate } from 'react-router-dom'
+import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../config/firebase-config'
-import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth'
 
 
-const Login = () => {
+const SignUp = () => {
 
-
-    const [loginEmail, setLoginEmail] = useState("");
-    const [loginPassword, setLoginPassword] = useState("");
+    const [registerEmail, setRegisterEmail] = useState("");
+    const [registerPassword, setRegisterPassword] = useState("");
 
     const [user, setUser] = useState({});
 
@@ -19,43 +17,41 @@ const Login = () => {
       setUser(currentUser);
     });
 
-    const navigate = useNavigate()
+    const register = async () => {
+            try {
+                const user = await createUserWithEmailAndPassword(
+                  auth,
+                  registerEmail,
+                  registerPassword
+                );
+                console.log(user);
+            }   catch (error) {
+                console.log(error.message);
+            }
+        };  
 
-    const handlSignup = () =>{
-      navigate("/signup")
-    }
 
-
-    const login = async () => {
-        try {
-          const user = await signInWithEmailAndPassword(
-            auth,
-            loginEmail,
-            loginPassword
-          );
-          console.log(user);
-        } catch (error) {
-          console.log(error.message);
-        }
-      };
     return (
         <div>
             <NavBar />
-            {/* <h2>Login</h2> */}
+            {/* <h2>SignUp</h2> */}
 
-            <div className="top-login">
-                <div className="login_logo">
+            <div className="top-SignUp">
+                <div className="SignUp_logo">
                     <img src="https://masai-lms-tau.vercel.app/assets/logo2.1d773fa0.png" alt="Masai School" />
                 </div>
-                <div className="login_form">
+                <div className="SignUp_form">
+                <h2 style={{marginTop:"-12px", marginBottom:"30px"}}>Register</h2>
                 <FormControl variant="standard">
+                    
                     <Box>
+                        
                         <label >Email</label>
                         <br /><br />
                         <TextField 
                             style={{width:'550px'}}
                             onChange={(event) => {
-                                setLoginEmail(event.target.value);
+                                setRegisterEmail(event.target.value);
                               }}
                          />
                          <br />
@@ -71,16 +67,16 @@ const Login = () => {
                         <TextField 
                             style={{width:'550px'}}
                             onChange={(event) => {
-                                setLoginPassword(event.target.value);
+                                setRegisterPassword(event.target.value);
                               }}
                          />
                          <br />
                     </Box>
-                        <FormControlLabel control={<Checkbox defaultChecked />} label="Remember me" />
+                        {/* <FormControlLabel control={<Checkbox defaultChecked />} label="Remember me" /> */}
 
-                    <Box className="pass_login">
-                        <p style={{fontSize:"18px", cursor: "pointer"}}>Forgot Your Password?</p>
-                        <Button onClick={login}>LOG IN</Button>
+                    <Box className="pass_SignUp">
+                        {/* <p>Forgot Your Password?</p> */}
+                        <Button onClick={register} >Register</Button>
                     </Box>
                 </FormControl>
 
@@ -89,15 +85,9 @@ const Login = () => {
                         <input />
                     </div> */}
                 </div>
-                <div className="needaccount">
-                    <span>Need An Account?</span>
-                    <span
-                    style={{cursor: "pointer"}}
-                     onClick={()=>handlSignup()}>SIGN UP</span>
-                </div>
             </div>
         </div>
     )
 }
 
-export default Login
+export default SignUp

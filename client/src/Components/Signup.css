@@ -1,4 +1,4 @@
-.top-login{
+.top-SignUp{
     padding:10px 5px 10px 5px;
     max-width: 650px;
     margin: 0 auto;
@@ -8,14 +8,14 @@
 }
 
 
-.top-login{
+.top-SignUp{
   margin-top:155px;
   /* align-items: center; */
   /* text-align: center; */
 }
 
 @media screen and (max-width: 750px) {
-  .top-login {
+  .top-SignUp {
       margin-top:105px;
   }
 }
@@ -27,7 +27,7 @@
 
 
 
-.login_form {
+.SignUp_form {
     
     margin-top: 20px;
     background-color: #fff;
@@ -40,7 +40,7 @@
   }
   
 
-  .login_logo{
+  .SignUp_logo{
     margin: 30px;
     padding-bottom: 30px;
     display: flex;
@@ -48,7 +48,7 @@
   }
 
 
-.login_logo > img{
+.SignUp_logo > img{
   height: 4rem;
   display: block;
   align-items: center;
@@ -59,7 +59,7 @@
 
 
 
-  .pass_login{
+  .pass_SignUp{
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -67,14 +67,14 @@
 
   }
 
-.pass_login > p{
+.pass_SignUp > p{
     --tw-text-opacity: 1;
     color: rgb(75 85 99/var(--tw-text-opacity));
     font-size: .875rem;
     line-height: 1.25rem;
     margin-right: 20px;
 }
-  .pass_login > Button {
+  .pass_SignUp > Button {
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     background-color: #000;
@@ -87,7 +87,7 @@
     border-radius:7px;
   }
 
-  .pass_login > Button:hover {
+  .pass_SignUp > Button:hover {
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     --tw-bg-opacity: 1;
@@ -95,14 +95,4 @@
     padding-left: 1rem;
     padding-right: 1rem;
     border-color: transparent;
-  }
-
-
-  .needaccount{
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 1.5rem
-  }
-  .needaccount > span{
-    margin: .5rem;
   }
