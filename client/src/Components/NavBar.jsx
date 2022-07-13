@@ -44,6 +44,8 @@ const NavBar = () => {
 
 const logout = async () => {
     await signOut(auth);
+        alert("Log Out Successful")
+    
   };
   const navigate = useNavigate()
 
@@ -51,7 +53,9 @@ const logout = async () => {
     navigate("/login")
   }
 
-
+  const handlProfile = () =>{
+    navigate("/Profile")
+  }
 
 
 
@@ -184,6 +188,7 @@ const logout = async () => {
             style={{marginRight:"150px"}}
             >
               <Tooltip title="Open settings">
+                
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 {/* <Typography textAlign="center">{user.email}</Typography> */}
 
@@ -220,7 +225,7 @@ const logout = async () => {
                 </MenuItem>
                 <hr/>
 
-                <MenuItem>
+                <MenuItem onClick={() =>handlProfile()}>
                     <Typography textAlign="center">Profile</Typography>
                 </MenuItem>
                 <hr/>

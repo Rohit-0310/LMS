@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import DashBoard from './Components/DashBoard';
 import Login from './Components/Login';
+import Profile from './Components/Profile';
 import SignUp from './Components/Signup';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
                 <Route path={"/"} element={<DashBoard />}/>
                 <Route path={"/Login"} element={<Login />} />
                 <Route path={"/Signup"} element={<SignUp />} />
+                <Route path={"/Profile"} element={<Profile />} />
             </Routes>
         </div>
     );

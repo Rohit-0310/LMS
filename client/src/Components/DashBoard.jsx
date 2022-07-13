@@ -5,6 +5,7 @@ const DashBoard = () => {
   return (
     <div>
         <NavBar />
+        <h2 style={{textAlign: 'center'}}>Dashboard </h2>
     </div>
   )
 }
