@@ -6,6 +6,7 @@ const lectureSchema = new mongoose.Schema({
     teachername: {type: String, required: true},
     lecturetype: {type: String, required: true},
     lecturetag: {type: String, required: true},
+    attendance:  {type: String, required: false},
     date: {type: String, required: true},
     time: {type: String, required: true},
     
