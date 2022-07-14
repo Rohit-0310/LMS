@@ -66,6 +66,9 @@ const logout = async () => {
     navigate("/Lecture")
   }
 
+  const handlAssignment = () =>{
+    navigate("/Assignment")
+  }
 
 
 
@@ -147,7 +150,7 @@ const logout = async () => {
                   </MenuItem>
                 ))} */}
                 <Button style={{color:"#6b7280"}}  textAlign="center" onClick={() =>handlLecture()} >Lectures</Button><br />
-                <Button style={{color:"#6b7280"}}  textAlign="center">Assignments</Button><br />
+                <Button style={{color:"#6b7280"}}  textAlign="center" onClick={() =>handlAssignment()}>Assignments</Button><br />
                 <Button style={{color:"#6b7280"}}  textAlign="center" onClick={() =>handlAdmin()}>Admin</Button><br />
                 <Button style={{color:"#6b7280"}}  textAlign="center">Tickets</Button><br />
                 <Button style={{color:"#6b7280"}}  textAlign="center">Discussions</Button><br />
@@ -185,7 +188,7 @@ const logout = async () => {
                 </Button>
               ))} */}
                 <Button style={{color:"#6b7280"}} textAlign="center" onClick={() =>handlLecture()}>Lectures</Button>
-                <Button style={{color:"#6b7280"}} textAlign="center">Assignments</Button>
+                <Button style={{color:"#6b7280"}} textAlign="center" onClick={() =>handlAssignment()}>Assignments</Button>
                 <Button style={{color:"#6b7280"}} textAlign="center" onClick={() =>handlAdmin()}>Admin</Button>
                 <Button style={{color:"#6b7280"}} textAlign="center">Tickets</Button>
                 <Button style={{color:"#6b7280"}} textAlign="center">Discussions</Button>

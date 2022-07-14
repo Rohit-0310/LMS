@@ -1,0 +1,15 @@
+.Ass_page{
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  .card{
+    border: 1px solid #111;
+    margin: 10px;
+  }
+
+  .card_flex{
+    display: flex;
+    justify-content: space-between;
+  }

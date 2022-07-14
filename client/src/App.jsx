@@ -2,6 +2,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Admin from './Components/Admin';
+import Assignment from './Components/Assignment';
 import CreateAssignment from './Components/CreateAssignment';
 import CreateLecture from './Components/CreateLecture';
 import DashBoard from './Components/DashBoard';
@@ -23,6 +24,7 @@ function App() {
                 <Route path={"/Admin/CreateLecture"} element={<CreateLecture />} />
                 <Route path={"/Admin/CreateAssignment"} element={<CreateAssignment />} />
                 <Route path={"/Lecture"} element={<Lecture />} />
+                <Route path={"/Assignment"} element={<Assignment />} />
             </Routes>
         </div>
     );
