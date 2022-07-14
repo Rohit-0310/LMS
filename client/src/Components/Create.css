@@ -1,0 +1,51 @@
+form{
+    display: flex;
+    /* margin: 0 auto; */
+    /* min-height: 100vh; */
+    justify-content: center;
+    
+}
+.fotm_main{
+    margin-top: 30px;
+    background-color: #fff;
+    box-shadow: 4px 3px 20px #3535358c;
+    border-radius: 20px;
+    padding: 20px;
+    width: 35%
+}
+
+.InputBox > input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #9E9E9E;
+    box-sizing: border-box;
+}
+
+.ImgStyle{
+    display: flex;
+    /* margin: 0 auto; */
+    /* min-height: 100vh; */
+    justify-content: center;
+}
+
+.InputBox_name{
+    display:flex;
+    justify-content: space-between;
+}
+
+.InputBox_name > .InputBox{
+    width: 48%;
+}
+
+.btn{
+    background-color: #6f00b6;
+    color: #fff;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+}
