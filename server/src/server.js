@@ -2,7 +2,7 @@ const express = require("express");
 
 const connect = require("./configs/db")
 
-const port = 3001;
+const port = process.env.PORT || 5000;
 
 
 
@@ -21,7 +21,15 @@ app.use("/lecture", lectureController)
 
 
 
-app.listen(port, async function(){
+// app.listen(port, async function(){
+//     await connect();
+//     console.log(`listening on port ${port}`)
+// });
+
+const start=async()=>{
     await connect();
-    console.log(`listening on port ${port}`)
-});
+    app.listen(port,()=>{
+        console.log(`listening on port ${port}`)
+    })
+    }
+    module.exports=start;
