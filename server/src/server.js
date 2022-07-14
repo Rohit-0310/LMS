@@ -7,6 +7,7 @@ const port = 3001;
 
 
 const assignmentController = require("./controllers/assignment.controller");
+const lectureController = require("./controllers/lecture.controller");
 
 
 
@@ -16,6 +17,7 @@ app.use(express.json());
 
 
 app.use("/assignment", assignmentController)
+app.use("/lecture", lectureController)
 
 
 
