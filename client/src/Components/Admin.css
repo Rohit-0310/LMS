@@ -1,3 +1,11 @@
+.Adm_lec{
+  max-width: 1080px;
+  margin: 0 auto;
+  margin-top: 20px;
+  /* box-sizing: border-box; */
+}
+
+
 .top-Admin{
     padding:10px 5px 10px 5px;
     max-width: 900px;

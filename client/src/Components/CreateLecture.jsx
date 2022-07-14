@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import NavBar from './NavBar';
 import "./Create.css";
-import { Button } from '@mui/material';
 
 
 const CreateLecture = () => {
@@ -34,6 +33,10 @@ const CreateLecture = () => {
     return (
         <div>
             <NavBar />
+            <div className="Add_page">
+                  <h2 >Add Lecture Page</h2>
+            </div>
+            <hr />
 
             <div className="ImgStyle">
                 <img  src="https://masai-lms-tau.vercel.app/assets/logo2.1d773fa0.png" alt="Masai School" />
@@ -98,7 +101,6 @@ const CreateLecture = () => {
                             type="Time"  required />
                         </div>
                     </div>
-
 
                     <button onClick={Handleclick} className="btn" type="submit" ><b>Create lecture</b></button>
 

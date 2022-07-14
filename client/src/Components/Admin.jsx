@@ -17,7 +17,10 @@ const Admin = () => {
     return (
       <div>
           <NavBar />
-          {/* <h1>This is am Admin Page</h1> */}
+          <div className="Adm_lec">
+                  <h2 >Admin</h2>
+          </div>
+            <hr />
 
           <div className="top-Admin">
                     <div className="Admin_logo">
