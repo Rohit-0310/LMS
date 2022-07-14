@@ -1,0 +1,48 @@
+.top-Admin{
+    padding:10px 5px 10px 5px;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 50vh;
+    font-family: 'Roboto', sans-serif !important;
+  	box-sizing: border-box;
+}
+
+/* 
+.top-Admin{
+  margin-top:155px;
+  
+} */
+  
+  .Admin_logo{
+    margin: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content:center;
+  }
+
+
+.Admin_logo > img{
+  height: 4rem;
+  display: block;
+  align-items: center;
+  
+}
+
+
+.Admin_Create{
+    display: flex;
+    justify-content:space-between;
+    /* margin-top:5rem; */
+    
+}
+
+.Admin_Create > Button{
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: .7rem;
+    box-shadow: 1px 1px 10px #3535358c;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-weight: 700;
+}

@@ -58,6 +58,11 @@ const logout = async () => {
   }
 
 
+  const handlAdmin = () =>{
+    navigate("/Admin")
+  }
+
+
 
 
 
@@ -137,13 +142,13 @@ const logout = async () => {
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))} */}
-                <Typography textAlign="center">Lectures</Typography>
-                <Typography textAlign="center">Assignments</Typography>
-                <Typography textAlign="center">Quizzes</Typography>
-                <Typography textAlign="center">Tickets</Typography>
-                <Typography textAlign="center">Discussions</Typography>
-                <Typography textAlign="center">Notifications</Typography>
-                <Typography textAlign="center">Electives</Typography>
+                <Button style={{color:"#6b7280"}}  textAlign="center">Lectures</Button><br />
+                <Button style={{color:"#6b7280"}}  textAlign="center">Assignments</Button><br />
+                <Button style={{color:"#6b7280"}}  textAlign="center" onClick={() =>handlAdmin()}>Admin</Button><br />
+                <Button style={{color:"#6b7280"}}  textAlign="center">Tickets</Button><br />
+                <Button style={{color:"#6b7280"}}  textAlign="center">Discussions</Button><br />
+                <Button style={{color:"#6b7280"}}  textAlign="center">Notifications</Button><br />
+                <Button style={{color:"#6b7280"}}  textAlign="center">Electives</Button><br />
               </Menu>
             </Box>
             {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
@@ -177,7 +182,7 @@ const logout = async () => {
               ))} */}
                 <Button style={{color:"#6b7280"}} textAlign="center">Lectures</Button>
                 <Button style={{color:"#6b7280"}} textAlign="center">Assignments</Button>
-                <Button style={{color:"#6b7280"}} textAlign="center">Quizzes</Button>
+                <Button style={{color:"#6b7280"}} textAlign="center" onClick={() =>handlAdmin()}>Admin</Button>
                 <Button style={{color:"#6b7280"}} textAlign="center">Tickets</Button>
                 <Button style={{color:"#6b7280"}} textAlign="center">Discussions</Button>
                 <Button style={{color:"#6b7280"}} textAlign="center">Notifications</Button>
