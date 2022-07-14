@@ -14,8 +14,29 @@ const get = (model) => async(req, res) => {
     return res.status(200).send({items});
 };
 
+const getOne = (model) => async(req, res) => {
+    const item = await model.findById(req.params.id).lean().exec()  // db.tags.findOne({_id: ""})
+
+    return res.status(200).send({item});
+};
+
+const updateOne = (model) => async(req, res) => {
+    const item = await model.findByIdAndUpdate(req.params.id, req.body, {new: true}).lean().exec()  // db.tag.update({_id: ""},$set:{"first_name": "Rohit"})
+
+    return res.status(200).send({item});
+};
+
+const DeleteOne = (model) => async(req, res) => {
+    const item = await model.findByIdAndDelete(req.params.id).lean().exec()  // db.users.remove({_id: ""})
+
+    return res.status(200).send({item});
+}
+
 
 module.exports = {
     post,
-    get
+    get,
+    getOne,
+    updateOne,
+    DeleteOne
 };
