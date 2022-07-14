@@ -29,7 +29,7 @@ const Assignment = () => {
       <div>
               <NavBar />
                     <div className="Ass_page">
-                        <h2 >Lectures</h2>
+                        <h2 >Assignment</h2>
                     </div>
                     <hr />
                     <div>
