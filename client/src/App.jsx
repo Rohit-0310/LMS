@@ -5,6 +5,7 @@ import Admin from './Components/Admin';
 import CreateAssignment from './Components/CreateAssignment';
 import CreateLecture from './Components/CreateLecture';
 import DashBoard from './Components/DashBoard';
+import Lecture from './Components/Lecture';
 import Login from './Components/Login';
 import Profile from './Components/Profile';
 import SignUp from './Components/Signup';
@@ -21,6 +22,7 @@ function App() {
                 <Route path={"/Admin"} element={<Admin />} />
                 <Route path={"/Admin/CreateLecture"} element={<CreateLecture />} />
                 <Route path={"/Admin/CreateAssignment"} element={<CreateAssignment />} />
+                <Route path={"/Lecture"} element={<Lecture />} />
             </Routes>
         </div>
     );

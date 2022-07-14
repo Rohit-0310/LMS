@@ -62,6 +62,10 @@ const logout = async () => {
     navigate("/Admin")
   }
 
+  const handlLecture = () =>{
+    navigate("/Lecture")
+  }
+
 
 
 
@@ -142,7 +146,7 @@ const logout = async () => {
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))} */}
-                <Button style={{color:"#6b7280"}}  textAlign="center">Lectures</Button><br />
+                <Button style={{color:"#6b7280"}}  textAlign="center" onClick={() =>handlLecture()} >Lectures</Button><br />
                 <Button style={{color:"#6b7280"}}  textAlign="center">Assignments</Button><br />
                 <Button style={{color:"#6b7280"}}  textAlign="center" onClick={() =>handlAdmin()}>Admin</Button><br />
                 <Button style={{color:"#6b7280"}}  textAlign="center">Tickets</Button><br />
@@ -180,7 +184,7 @@ const logout = async () => {
                   {page}
                 </Button>
               ))} */}
-                <Button style={{color:"#6b7280"}} textAlign="center">Lectures</Button>
+                <Button style={{color:"#6b7280"}} textAlign="center" onClick={() =>handlLecture()}>Lectures</Button>
                 <Button style={{color:"#6b7280"}} textAlign="center">Assignments</Button>
                 <Button style={{color:"#6b7280"}} textAlign="center" onClick={() =>handlAdmin()}>Admin</Button>
                 <Button style={{color:"#6b7280"}} textAlign="center">Tickets</Button>
