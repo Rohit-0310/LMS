@@ -13,12 +13,12 @@
   
 } */
   
-  .Admin_logo{
-    margin: 30px;
-    padding-bottom: 30px;
-    display: flex;
-    justify-content:center;
-  }
+.Admin_logo{
+  margin: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content:center;
+}
 
 
 .Admin_logo > img{

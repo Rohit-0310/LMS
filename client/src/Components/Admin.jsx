@@ -2,8 +2,18 @@ import React from 'react';
 import NavBar from './NavBar';
 import "./Admin.css";
 import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Admin = () => {
+
+    const navigate = useNavigate()
+    const CreateLecturePage = () =>{
+            navigate("/Admin/CreateLecture")
+        }
+
+    const CreateAssignmentPage = () =>{
+        navigate("/Admin/CreateAssignment")
+    }
     return (
       <div>
           <NavBar />
@@ -16,10 +26,10 @@ const Admin = () => {
         
 
                     <div className="Admin_Create">
-                        <Button>Create A Lecture</Button>
-                        <Button>Create An Assignment</Button>
+                        <Button onClick={() =>CreateLecturePage()}>Create A Lecture</Button>
+                        <Button onClick={() =>CreateAssignmentPage()}>Create An Assignment</Button>
                     </div>
-              </div>
+            </div>
       </div>
     )
 }
