@@ -1,10 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavBar from './NavBar';
 import "./Create.css";
 import { Button } from '@mui/material';
 
 
 const CreateLecture = () => {
+
+    const [form, setForm] = useState("");
+
+    const Handlechange = (e) => {
+        // console.log(e.target.value)
+        const { name, value } = e.target;
+        setForm({ ...form, [name]: value });
+        console.log(value.length)
+    };
+    console.log(form)
+
+    const Handleclick = (e) => {
+        e.preventDefault();
+        // console.log(form);
+    
+        fetch(`http://localhost:5000/lecture`, {
+          method: "POST",
+          body: JSON.stringify(form),
+          headers: {
+            "content-type": "application/json",
+          },
+        });
+    };
+    
+
+
     return (
         <div>
             <NavBar />
@@ -21,42 +47,60 @@ const CreateLecture = () => {
 
                         <div className='InputBox'>
                             <label><b>Lecture Name</b></label> <br />
-                            <input  type="text"  required />
+                            <input 
+                            onChange={Handlechange} 
+                            name="lecturename"
+                            type="text"  required />
                         </div>
 
                         <div className='InputBox'>
                             <label><b>Teacher Name</b></label> <br />
-                            <input    />
+                            <input 
+                            onChange={Handlechange} 
+                            name="teachername"
+                            type="text"  required />
                         </div>
 
 
 
                     <div className='InputBox'>
                         <label ><b>Lecture Type</b></label> <br />
-                        <input  type="text"  required />
+                        <input 
+                        onChange={Handlechange} 
+                        name="lecturetype"
+                        type="text"  required />
                     </div>
 
                     <div className='InputBox'>
                         <label ><b>Lecture Tag</b></label> <br />
-                        <input  type="text"  required />
+                        <input 
+                        onChange={Handlechange} 
+                        name="lecturetag"
+                        type="text"  required />
                     </div>
 
 
                     <div className='InputBox_name'>
                         <div className='InputBox'>
                             <label ><b>Date</b></label> <br />
-                            <input  type="date"  required />
+                            <input 
+                            onChange={Handlechange} 
+                            name="date"
+                            type="date"  required />
                         </div>
 
 
                         <div className='InputBox'>
                             <label ><b>Time</b></label> <br />
-                            <input  type="Time"  required />
+                            <input 
+                            onChange={Handlechange} 
+                            name="time"
+                            type="Time"  required />
                         </div>
                     </div>
 
 
-                    <button className="btn" type="submit" ><b>Create lecture</b></button>
+                    <button onClick={Handleclick} className="btn" type="submit" ><b>Create lecture</b></button>
 
                 </div>
             </form>
