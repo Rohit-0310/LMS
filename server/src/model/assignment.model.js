@@ -6,6 +6,7 @@ const assignmentSchema = new mongoose.Schema({
     teachername: {type: String, required: true},
     assignmenttype: {type: String, required: true},
     assignmenttag: {type: String, required: true},
+    status:{type: String, required: true},
     date: {type: String, required: true},
     time: {type: String, required: true},
     
