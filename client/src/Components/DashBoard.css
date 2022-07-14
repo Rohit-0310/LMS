@@ -1,0 +1,43 @@
+.Dash_top{
+    padding:10px 5px 10px 5px;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif !important;
+  	box-sizing: border-box;
+}
+
+
+.Dash_refer{
+    display: flex;
+    justify-content: space-between;
+    position:static;
+    /* margin: 20px 150px 0 150px; */
+    
+    box-sizing: border-box;
+}
+
+
+.Dash_button > Button {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    background-color: #000;
+    /* color: #fff; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin:0 20px 0 0;
+    border-color: transparent;
+    font-weight: 600;
+    font-size:14px;
+    border-radius:7px;
+  }
+
+  .Dash_button > Button:hover {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81/var(--tw-bg-opacity));
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-color: transparent;
+  }
