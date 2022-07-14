@@ -8,10 +8,14 @@ const post = (model) => async (req, res) => {
     }
 };
 
+const get = (model) => async(req, res) => {
+    const items = await model.find().lean().exec(); // db.tag.find() //thennable => proper promise
 
+    return res.status(200).send({items});
+};
 
 
 module.exports = {
     post,
-    
+    get
 };
