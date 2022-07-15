@@ -19,13 +19,17 @@ const CreateLecture = () => {
         e.preventDefault();
         // console.log(form);
     
-        fetch(`http://localhost:5000/lecture`, {
+        fetch(`https://lms-masai.herokuapp.com/lecture`, {
           method: "POST",
           body: JSON.stringify(form),
           headers: {
             "content-type": "application/json",
           },
         });
+
+        setTimeout(() => {
+            alert("Lecture Created successfully!")
+          }, 2000);
     };
     
 

@@ -10,7 +10,7 @@ const Assignment = () => {
     const [assignment,setAssignment] = useState([]);
 
     const getData = () =>{
-      fetch(`http://localhost:5000/assignment`)
+      fetch(`https://lms-masai.herokuapp.com/assignment`)
         .then((data) =>data.json())
         .then((res)=>{setAssignment(res.items)})
 

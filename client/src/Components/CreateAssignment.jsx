@@ -18,7 +18,7 @@ const CreateAssignment = () => {
         e.preventDefault();
         // console.log(form);
     
-        fetch(`http://localhost:5000/assignment`, {
+        fetch(`https://lms-masai.herokuapp.com/assignment`, {
           method: "POST",
           body: JSON.stringify(form),
           headers: {

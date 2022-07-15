@@ -11,7 +11,7 @@ const Lecture = () => {
     const [lecture,setLecture] =useState([]);
 
     const getData = () =>{
-      fetch(`http://localhost:5000/lecture`)
+      fetch(`https://lms-masai.herokuapp.com/lecture`)
         .then((data) =>data.json())
         .then((res)=>{setLecture(res.items)})
 
