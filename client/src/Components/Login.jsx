@@ -80,6 +80,7 @@ const Login = () => {
                         <br />
                         
                         <TextField 
+                            type="password"
                             style={{width:'550px'}}
                             onChange={(event) => {
                                 setLoginPassword(event.target.value);

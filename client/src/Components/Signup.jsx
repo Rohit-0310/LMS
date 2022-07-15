@@ -80,6 +80,7 @@ const SignUp = () => {
                         <br />
                         
                         <TextField 
+                            type="password"
                             style={{width:'550px'}}
                             onChange={(event) => {
                                 setRegisterPassword(event.target.value);
