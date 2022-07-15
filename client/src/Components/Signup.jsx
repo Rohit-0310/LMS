@@ -4,6 +4,7 @@ import "./Signup.css"
 import { Box, Button, Checkbox, FormControl, FormControlLabel, FormGroup, Input, InputLabel, TextField } from '@mui/material'
 import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../config/firebase-config'
+import { useNavigate } from 'react-router-dom'
 
 
 const SignUp = () => {
@@ -13,9 +14,16 @@ const SignUp = () => {
 
     const [user, setUser] = useState({});
 
+    const navigate = useNavigate()
+
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
+
+
+    const handlProfile = () =>{
+        navigate("/Profile")
+      }
 
     const register = async () => {
             try {
@@ -25,7 +33,14 @@ const SignUp = () => {
                   registerPassword
                 );
                 console.log(user);
+                setTimeout(() => {
+                    alert("Signup  successfully!")
+                    handlProfile()
+                  }, 1000);
             }   catch (error) {
+                setTimeout(() => {
+                    alert(error.message)
+                  }, 1000);
                 console.log(error.message);
             }
         };  

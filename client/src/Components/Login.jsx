@@ -25,19 +25,30 @@ const Login = () => {
       navigate("/signup")
     }
 
+    const handlProfile = () =>{
+        navigate("/Profile")
+      }
+
 
     const login = async () => {
         try {
-          const user = await signInWithEmailAndPassword(
-            auth,
-            loginEmail,
-            loginPassword
-          );
-          console.log(user);
-        } catch (error) {
-          console.log(error.message);
-        }
-      };
+                const user = await signInWithEmailAndPassword(
+                  auth,
+                  loginEmail,
+                  loginPassword
+                );
+                console.log(user);
+                setTimeout(() => {
+                    alert("Login  successfully!")
+                    handlProfile()
+                  }, 1000);
+            } catch (error) {
+              console.log(error.message);
+              setTimeout(() => {
+                alert(error.message)
+              }, 1000);
+            }
+         };
     return (
         <div>
             <NavBar />
