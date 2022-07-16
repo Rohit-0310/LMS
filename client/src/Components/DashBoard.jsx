@@ -6,39 +6,68 @@ import "./DashBoard.css"
 
 const DashBoard = () => {
 
-    const [lecture,setLecture] =useState([]);
+    // const [lecture,setLecture] =useState([]);
+
+    // const [todatLecture,setTodayLecture] =useState([]);
+
+    // const getData = () =>{
+    //   fetch(`https://lms-masai.herokuapp.com/lecture`)
+    //     .then((data) =>data.json())
+    //     .then((res)=>{setLecture(res.items)})
+
+    // }
+
+    // const getTodayLecture = () => {
+    //     const today = new Date()
+    //     const date = today.getFullYear() + '-0' + (today.getMonth() + 1) + '-' + today.getDate()
+        
+    //     let tempdata = lecture.filter((currelement)=>{
+    //         return date === currelement.date
+    //     })
+
+    //     setTodayLecture(tempdata);
+    //     console.log("todatLecture", todatLecture);
+    //     console.log("date", date)
+
+
+    //     console.log("month",today.getMonth()+1);
+    // }
+    // console.log("todatLecture", todatLecture);
+
+    // useEffect (()=>{
+    //   getData()
+    //   getTodayLecture()
+    // },[])
+
+    // console.log(lecture)
+
+    // const [lecture,setLecture] =useState([]);
 
     const [todatLecture,setTodayLecture] =useState([]);
 
     const getData = () =>{
       fetch(`https://lms-masai.herokuapp.com/lecture`)
         .then((data) =>data.json())
-        .then((res)=>{setLecture(res.items)})
+        .then((res)=>{
+            let today = new Date()
+            let date = today.getFullYear() + '-0' + (today.getMonth() + 1) + '-' + today.getDate()
+            
+            let tempdata = res.items.filter((currelement)=>{
+                return (currelement.date ===date)
+            })
 
-    }
+            setTodayLecture(tempdata);
+            console.log("todatLecture", todatLecture);
+            console.log("date", date)
 
-    const getTodayLecture = () => {
-        const today = new Date()
-        const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
-        
-        let tempdata = lecture.filter((currelement)=>{
-            return date === currelement.date
         })
 
-        setTodayLecture(tempdata);
-        console.log("todatLecture", todatLecture);
-        console.log("date", date)
     }
 
-
     useEffect (()=>{
-      getData()
-      getTodayLecture()
+        getData()
     },[])
-
-    console.log(lecture)
-
-
+    
     return (
       <div>
           <NavBar />
