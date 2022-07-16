@@ -35,7 +35,7 @@ const CreateAssignment = () => {
         <div>
             <NavBar />
             <div className="Add_page">
-                  <h2 >Add Lecture Page</h2>
+                  <h2 >Add Assignment Page</h2>
             </div>
             <hr />
 
@@ -67,16 +67,31 @@ const CreateAssignment = () => {
 
         <div className='InputBox'>
             <label ><b>Assignment Type</b></label> <br />
-            <input  onChange={Handlechange} 
+            {/* <input  onChange={Handlechange} 
                     name="assignmenttype"
-                    type="text"  required />
+                    type="text"  required /> */}
+
+
+            <select name="assignmenttype" onChange={Handlechange}  type="text" id="assignmenttype">
+                <option value="Evaluation Problem's">Evaluation Problem's</option>
+                <option value="Assignment Problem's">Assignment Problem's</option>
+            </select>
         </div>
 
         <div className='InputBox'>
             <label ><b>Assignment Tag</b></label> <br />
-            <input  onChange={Handlechange} 
+            {/* <input  onChange={Handlechange} 
                     name="assignmenttag"
-                    type="text"  required />
+                    type="text"  required /> */}
+
+
+            <select name="assignmenttag" onChange={Handlechange}  type="text" id="assignmenttag">
+                <option value="MERN">MERN</option>
+                <option value="FULL_STACK">FULL_STACK</option>
+                <option value="FRONTEND">FRONTEND</option>
+                <option value="BACKEND">BACKEND</option>
+                <option value="OJ">OJ</option>
+            </select>
         </div>
 
         
