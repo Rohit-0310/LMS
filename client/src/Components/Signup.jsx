@@ -34,7 +34,7 @@ const SignUp = () => {
                 );
                 console.log(user);
                 setTimeout(() => {
-                    alert("Signup  successfully!")
+                    alert("Sign Up  successfully!")
                     handlProfile()
                   }, 1000);
             }   catch (error) {

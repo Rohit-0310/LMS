@@ -103,9 +103,8 @@ const Login = () => {
                 </div>
                 <div className="needaccount">
                     <span>Need An Account?</span>
-                    <span
-                    style={{cursor: "pointer"}}
-                     onClick={()=>handlSignup()}>SIGN UP</span>
+                    <button className="needaccount_SignUp"
+                     onClick={()=>handlSignup()}>SIGN UP</button>
                 </div>
             </div>
         </div>

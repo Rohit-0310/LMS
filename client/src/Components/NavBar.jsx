@@ -44,7 +44,11 @@ const NavBar = () => {
 
 const logout = async () => {
     await signOut(auth);
-        alert("Log Out Successful")
+    setTimeout(() =>{
+        alert("Log Out Successful");
+        navigate("/login");
+
+    })
     
   };
   const navigate = useNavigate()
