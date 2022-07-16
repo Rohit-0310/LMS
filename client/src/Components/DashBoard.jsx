@@ -57,8 +57,8 @@ const DashBoard = () => {
             })
 
             setTodayLecture(tempdata);
-            console.log("todatLecture", todatLecture);
-            console.log("date", date)
+            // console.log("todatLecture", todatLecture);
+            // console.log("date", date)
 
         })
 
