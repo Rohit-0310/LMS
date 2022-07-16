@@ -72,18 +72,35 @@ const CreateLecture = () => {
 
                     <div className='InputBox'>
                         <label ><b>Lecture Type</b></label> <br />
-                        <input 
+                        {/* <input 
                         onChange={Handlechange} 
                         name="lecturetype"
-                        type="text"  required />
+                        type="text"  required /> */}
+
+
+                        <select name="lecturetype" onChange={Handlechange}  type="text" id="lecturetype">
+                            <option value="Live">Live</option>
+                            <option value="Reading">Reading</option>
+                            <option value="Video">Video</option>
+                            <option value="Others">Others</option>
+                        </select>
                     </div>
 
                     <div className='InputBox'>
                         <label ><b>Lecture Tag</b></label> <br />
-                        <input 
+                        {/* <input 
                         onChange={Handlechange} 
                         name="lecturetag"
-                        type="text"  required />
+                        type="text"  required /> */}
+                        <select name="lecturetag" onChange={Handlechange}  type="text" id="lecturetag">
+                            <option value="Coding">Coding</option>
+                            <option value="Algo">Algo</option>
+                            <option value="DSA">DSA</option>
+                            <option value="Scrum">Scrum</option>
+                            <option value="General">General</option>
+                            <option value="Problem">Problem</option>
+                            <option value="Others">Others</option>
+                        </select>
                     </div>
 
 
