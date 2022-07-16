@@ -61,7 +61,7 @@ const Login = () => {
                 <div className="login_form">
                 <FormControl variant="standard">
                     <Box>
-                        <label >Email</label>
+                        <label > <b>Email</b></label>
                         <br /><br />
                         <TextField 
                             style={{width:'550px'}}
@@ -75,7 +75,7 @@ const Login = () => {
                     
 
                     <Box>
-                        <label >Password</label>
+                        <label ><b>Password</b></label>
                         <br />
                         <br />
                         

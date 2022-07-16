@@ -36,13 +36,13 @@ const Lecture = () => {
                       <div className='card' key={item.id} >
                         <div className="card_flex">
                             <div style={{marginLeft:'20px'}}>
-                                <div style={{display: 'flex'}}>
-                                    <p style={{marginRight:'40px'}}>{item.lecturename}</p>
-                                    <p style={{backgroundColor:'green', color:'white', padding:'2px 10px 2px 10px'}}>{item.lecturetype}</p>
+                                <div style={{display: 'flex', marginBottom:'-10px'}}>
+                                    <p style={{marginRight:'40px', color:'#0D47A1', fontSize:'21px'}}>{item.lecturename}</p>
+                                    <p style={{backgroundColor:'green', color:'white', padding:'6px 10px 2px 10px', borderRadius:'7px'}}>{item.lecturetype}</p>
                                 </div>
                                 <div>
-                                    <span>{item.teachername} </span><span> Sceduled </span>
-                                    <span> {item.lecturetag} </span><span> at </span>
+                                    <span><b>{item.teachername} </b></span><span> Sceduled </span>
+                                    <span><b> {item.lecturetag} </b></span><span> at </span>
                                     <span>{item.date}</span><span> - </span>
                                     <span>{item.time}</span>
                                 </div>
