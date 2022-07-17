@@ -46,7 +46,7 @@ const logout = async () => {
     await signOut(auth);
     setTimeout(() =>{
         alert("Log Out Successful");
-        navigate("/login");
+   //     navigate("/login");
 
     })
     
