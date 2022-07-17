@@ -64,6 +64,7 @@ const Login = () => {
                         <label > <b>Email</b></label>
                         <br /><br />
                         <TextField 
+                            type="email"
                             style={{width:'550px'}}
                             onChange={(event) => {
                                 setLoginEmail(event.target.value);
