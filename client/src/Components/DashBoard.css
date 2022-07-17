@@ -41,3 +41,21 @@
     padding-right: 1rem;
     border-color: transparent;
   }
+
+
+
+  .Dash_page{
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  .Dash_card{
+    border: 1px solid #111;
+    margin: 10px;
+  }
+
+  .Dash_flex{
+    display: flex;
+    justify-content: space-between;
+  }

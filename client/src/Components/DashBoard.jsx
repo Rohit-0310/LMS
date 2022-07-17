@@ -83,10 +83,10 @@ const DashBoard = () => {
           <hr />
           <h2 style={{textAlign: 'center'}}>Dashboard </h2>
 
-          <div className="Lec_page">{
+          <div className="Dash_page">{
                     todatLecture.map((item)=>(
-                      <div className='card' key={item.id} >
-                        <div className="card_flex">
+                      <div className='Dash_card' key={item.id} >
+                        <div className="Dash_flex">
                             <div style={{marginLeft:'20px'}}>
                                 <div style={{display: 'flex' , marginBottom:'-10px'}}>
                                     <p style={{marginRight:'40px', color:'#0D47A1', fontSize:'21px'}}>{item.lecturename}</p>
